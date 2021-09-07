@@ -1,7 +1,7 @@
 #include "libft.h"
 
 // As long as size > 0, NUL-terminate the string.
-// Return theoretical copied string size i.e. source size.
+// Return the lenght of string that is tried to be created i.e. src size.
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

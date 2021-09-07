@@ -1,23 +1,27 @@
 #include "libft.h"
 
+// Return the lenght of string that is tried to be created.
+// Always NUL-terminate result if there is space.
+// Notes: Both dst and src must be NUL-terminated
+// but if dst does not NUL-terminate, length is size. 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (*dst && len < size)
+	i = 0;
+	while (*dst && i < size)
 	{
-		++len;
+		++i;
 		++dst;
 	}
-	while (*src && len + 1 < size)
+	while (*src && i + 1 < size)
 	{
 		*dst++ = *src++;
-		++len;
+		++i;
 	}
-	if (*src == 0)
-		*dst = 0;
+	if (i < size)
+		*dst = '\0';
 	while (*src++)
-		++len;
-	return (len);
+		++i;
+	return (i);
 }
