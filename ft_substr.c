@@ -9,6 +9,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	size_t	rlen;
 
+	if (!s)
+		return (NULL);
 	rlen = 0;
 	while (s[rlen])
 		++rlen;
