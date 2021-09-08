@@ -1,6 +1,6 @@
 #include "libft.h"
 
-// Return the lenght of string that is tried to be created.
+// Return the length of string that is tried to be created.
 // Always NUL-terminate result if there is space.
 // Notes: Both dst and src must be NUL-terminated
 // but if dst does not NUL-terminate, length is size. 
