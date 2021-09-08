@@ -4,15 +4,19 @@
 // Return held value when reach end of string.
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*temp;
+	char	*str;
+	char	*buf;
+	char	ch;
 
-	temp = NULL;
+	buf = NULL;
+	str = (char *)s;
+	ch = (char)c;
 	while (1)
 	{
-		if (*s == c)
-			temp = ((char *)s);
-		if (*s == '\0')
-			return (temp);
-		++s;
+		if (*str == ch)
+			buf = str;
+		if (*str == '\0')
+			return (buf);
+		++str;
 	}
 }
