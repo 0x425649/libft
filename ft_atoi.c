@@ -1,25 +1,31 @@
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+// Convert integer string into int ignoring leading whitespaces.
+// Store the value inside long. 
+// Return -1 when exceeding INT_MAX limit and 0 for INT_MIN.
+int	ft_atoi(const char *str)
 {
-	int	num;
-	int	is_negative;
-	int	value;
+	long	num;
+	int		is_negative;
+	int		digit;
 
 	is_negative = 0;
-	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
-		++nptr;
-	if (*nptr == '-' || *nptr == '+')
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		++str;
+	if (*str == '-' || *str == '+')
 	{
-		if (*nptr == '-')
+		if (*str++ == '-')
 			is_negative = 1;
-		++nptr;
 	}
 	num = 0;
-	while (*nptr >= '0' && *nptr <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		value = *nptr++ - '0';
-		num = num * 10 + value;
+		digit = *str++ - '0';
+		num = num * 10 + digit;
+		if (num > 2147483647 && !is_negative)
+			return (-1);
+		if (num > 2147483648 && is_negative)
+			return (0);
 	}
 	if (is_negative)
 		return (-num);
