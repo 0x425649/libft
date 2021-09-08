@@ -16,7 +16,7 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 	i = 0;
 	while (*little++)
 		++i;
-	while (len-- >= i)
+	while (*haystack && len-- >= i)
 	{
 		if (!ft_strncmp(haystack, needle, i))
 			return (haystack);
