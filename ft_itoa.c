@@ -1,8 +1,23 @@
 #include "libft.h"
 
-static int logn(int n)
+static int count_digit(int n)
 {
-    return (n > 1) ? 1 + logn(n / 10) : 0;
+	int 	i;
+	long	num;
+
+	num = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		num -= n;
+	else
+		num = n;
+	while (num > 0)
+	{
+		i++;
+		num /= 10;
+	}
+	return i;
 }
 
 // Allocates (with malloc(3)) and returns a string representing 
@@ -12,26 +27,29 @@ char	*ft_itoa(int n)
 	int		len;
 	char	*str;
 	int		is_neg;
-	char	c;
+	long	num;
 
 	is_neg = 0;
-	len = 0;
+	len = count_digit(n);
 	if (n < 0)
 	{
+		++len;
 		is_neg = 1;
-		n *= -1;
-		len += 1;
+		num = 0;
+		num -= n;
 	}
-	len += logn(n) + 1;
+	else
+		num = n;
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	while (n > 0)
+	if (n == 0)
+		*str = '0';
+	while (num > 0)
 	{
-		c = (n % 10) + '0';
-		n /= 10;
-		str[--len] = c;
+		str[--len] = (num % 10) + '0';
+		num /= 10;
 	}
 	if (is_neg)
 		*str = '-';
