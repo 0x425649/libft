@@ -56,6 +56,8 @@ char	**ft_split(char const *s, char c)
 	int		count;
 	char	**list;
 
+	if (c == '\0' || s == NULL)
+		return (NULL);
 	count = count_slice(s, c);
 	list = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!list)
