@@ -1,9 +1,12 @@
 #include "libft.h"
 
-int	count_slice(char const *str, char c)
+// Count number of substring from str with separator c.
+// Note: return 0 for string start with '\0'
+//       return 1 if separator not found. (search for nul-terminate).
+static size_t	count_slice(char const *str, char c)
 {
-	int			count;
-	char const	*temp;
+	size_t			count;
+	char const		*temp;
 
 	count = 0;
 	temp = str;
@@ -22,14 +25,14 @@ int	count_slice(char const *str, char c)
 	return (count);
 }
 
-void	set_slice(char **list, char const *str, char c)
+static void	set_slice(char **list, char const *str, char c)
 {
 	int			i;
 	char const	*temp;
 
 	i = 0;
 	temp = str;
-	while (1)
+	while (*str != '\0')
 	{
 		temp = ft_strchr(str, c);
 		if (temp == NULL)
@@ -51,10 +54,11 @@ void	set_slice(char **list, char const *str, char c)
 	return ;
 }
 
+// Split string, s into substring with separator c.
 char	**ft_split(char const *s, char c)
 {
-	int		count;
-	char	**list;
+	size_t		count;
+	char		**list;
 
 	if (s == NULL)
 		return (NULL);
