@@ -7,7 +7,7 @@ int	count_slice(char const *str, char c)
 
 	count = 0;
 	temp = str;
-	while (1)
+	while (*str != '\0')
 	{
 		temp = ft_strchr(str, c);
 		if (temp == NULL)
@@ -16,7 +16,6 @@ int	count_slice(char const *str, char c)
 			++count;
 		str = ++temp;
 	}
-	temp = ft_strchr(str, '\0');
 	if (temp > str)
 		++count;
 	return (count);
@@ -56,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	int		count;
 	char	**list;
 
-	if (c == '\0' || s == NULL)
+	if (s == NULL)
 		return (NULL);
 	count = count_slice(s, c);
 	list = (char **)malloc(sizeof(char *) * (count + 1));
