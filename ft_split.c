@@ -16,6 +16,7 @@ int	count_slice(char const *str, char c)
 			++count;
 		str = ++temp;
 	}
+	temp = ft_strchr(str, '\0');
 	if (temp > str)
 		++count;
 	return (count);
@@ -62,6 +63,7 @@ char	**ft_split(char const *s, char c)
 	if (!list)
 		return (NULL);
 	list[count] = 0;
-	set_slice(list, s, c);
+	if (count > 0)
+		set_slice(list, s, c);
 	return (list);
 }
