@@ -9,8 +9,7 @@ static size_t	count_slice(char const *str, char c)
 	char const		*temp;
 
 	count = 0;
-	temp = str;
-	while (*str != '\0')
+	while (*str != '\0' && c != '\0')
 	{
 		temp = ft_strchr(str, c);
 		if (temp == NULL)
@@ -31,8 +30,7 @@ static void	set_slice(char **list, char const *str, char c)
 	char const	*temp;
 
 	i = 0;
-	temp = str;
-	while (*str != '\0')
+	while (*str != '\0' && c != '\0')
 	{
 		temp = ft_strchr(str, c);
 		if (temp == NULL)
