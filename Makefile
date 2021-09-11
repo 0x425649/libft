@@ -64,7 +64,7 @@ $(SRCDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCDIR)
 
 clean:
-	rm -f $(OBJS) $(BOBJECTS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(TARGET)
