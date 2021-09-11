@@ -45,10 +45,10 @@ BSOURCES = ft_lstnew.c \
 			ft_lstsize.c \
  			ft_lstlast.c \
  			ft_lstadd_back.c \
-			ft_lstdelone \
-			ft_lstclear
-# 			ft_lstiter \
-# 			ft_lstmap
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 BOBJECTS = $(BSOURCES:.c=.o)
 
 TARGET = libft.a
