@@ -58,7 +58,7 @@ $(TARGET): $(OBJECTS)
 	ar crs $@ $(OBJECTS)
 
 bonus: $(BOBJECTS)
-	ar crs $@ $(BOBJECTS)
+	ar crs $(TARGET) $(BOBJECTS)
 
 # add header file dependency?
 $(SRCDIR)/%.o: $(SRCDIR)/%.c
