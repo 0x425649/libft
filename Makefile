@@ -40,7 +40,8 @@ SOURCES = ft_isalpha.c \
 			ft_putnbr_fd.c
 OBJECTS = $(SOURCES:.c=.o)
 
-BSOURCES = ft_lstnew.c 
+BSOURCES = ft_lstnew.c \
+			ft_lstadd_front.c \
 BOBJECTS = $(BSOURCES:.c=.o)
 
 TARGET = libft.a
