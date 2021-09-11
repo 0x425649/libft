@@ -44,8 +44,8 @@ BSOURCES = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
  			ft_lstlast.c \
- 			ft_lstadd_back.c
-# 			ft_lstdelone \
+ 			ft_lstadd_back.c \
+			ft_lstdelone \
 # 			ft_lstclear \
 # 			ft_lstiter \
 # 			ft_lstmap
@@ -60,7 +60,6 @@ $(TARGET): $(OBJECTS)
 bonus: $(BOBJECTS)
 	ar crs $(TARGET) $(BOBJECTS)
 
-# add header file dependency?
 $(SRCDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCDIR)
 
