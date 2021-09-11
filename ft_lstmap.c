@@ -1,7 +1,7 @@
 #include "libft.h"
 
 // Return new list formed by applying f to each element content.
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
 	t_list	*temp;

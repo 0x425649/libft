@@ -1,7 +1,7 @@
 #include "libft.h"
 
 // Count length of the list / number of elements.
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	len;
 

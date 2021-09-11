@@ -1,7 +1,7 @@
 #include "libft.h"
 
 // Clear lst memory.
-void		ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*el;
 	t_list	*next;

@@ -1,7 +1,7 @@
 #include "libft.h"
 
 // Allocate a list.
-t_list		*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
