@@ -42,10 +42,9 @@ OBJECTS = $(SOURCES:.c=.o)
 
 BSOURCES = ft_lstnew.c \
 			ft_lstadd_front.c \
-			ft_lstadd_front \
 			ft_lstsize.c \
- 			ft_lstlast \
-# 			ft_lstadd_back \
+ 			ft_lstlast.c \
+ 			ft_lstadd_back.c
 # 			ft_lstdelone \
 # 			ft_lstclear \
 # 			ft_lstiter \
