@@ -1,6 +1,7 @@
 #include "libft.h"
 
 // Right push element new into lst.
+// The new last is not guarantee to be null terminated.
 void		ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
@@ -13,6 +14,5 @@ void		ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	last = ft_lstlast(*lst);
-	new->next = last->next;
 	last->next = new;
 }
