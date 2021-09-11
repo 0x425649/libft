@@ -46,7 +46,7 @@ BSOURCES = ft_lstnew.c \
  			ft_lstlast.c \
  			ft_lstadd_back.c \
 			ft_lstdelone \
-# 			ft_lstclear \
+			ft_lstclear
 # 			ft_lstiter \
 # 			ft_lstmap
 BOBJECTS = $(BSOURCES:.c=.o)
