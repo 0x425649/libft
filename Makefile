@@ -44,7 +44,7 @@ BSOURCES = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstadd_front \
 			ft_lstsize.c \
-# 			ft_lstlast \
+ 			ft_lstlast \
 # 			ft_lstadd_back \
 # 			ft_lstdelone \
 # 			ft_lstclear \
